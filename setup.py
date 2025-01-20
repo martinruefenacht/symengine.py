@@ -117,7 +117,7 @@ class BuildExtWithCmake(_build_ext):
 
         cmake_cmd = ["cmake", source_dir,
             "-DCMAKE_BUILD_TYPE=" + cmake_build_type[0],
-            "-DSYMENGINE_INSTALL_PY_FILES=OFF",
+            "-DSYMENGINE_INSTALL_PY_FILES=ON",
         ]
         cmake_cmd.extend(process_opts(cmake_opts))
         if not path.exists(path.join(build_dir, "CMakeCache.txt")):
